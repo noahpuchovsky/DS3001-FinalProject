@@ -1,5 +1,4 @@
 import pandas as pd
-from sklearn import preprocessing
 
 mat_data = pd.read_csv("Data/student-mat.csv")
 por_data = pd.read_csv("Data/student-por.csv")
