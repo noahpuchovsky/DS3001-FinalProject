@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from DataLoad import data
+from DataLoad import data, raw_data
 from sklearn.metrics import max_error, mean_absolute_error, mean_squared_error
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -35,4 +35,7 @@ def print_results(y_pred, y_test, model):
     # plt.show()
     # print(model, ': \n', 'mean squared error: ', mse)
     return mse
+
+def show_dalc_consumption():
+    pass
 

@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 
-# mat_data = pd.read_csv("Data/student-mat.csv")
+raw_data = pd.read_csv("Data/student-por.csv")
 data = pd.read_csv("Data.csv", index_col=0)
 
 # data = (mat_data, por_data)
