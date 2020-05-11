@@ -36,6 +36,33 @@ def print_results(y_pred, y_test, model):
     # print(model, ': \n', 'mean squared error: ', mse)
     return mse
 
+def studytime_boxplot():
+    data['st_time'] = np.nan
+    df = [data]
+
+    for col in df:
+        col.loc[col['studytime'] == 1 , 'st_time'] = '< 2 hours'
+        col.loc[col['studytime'] == 2 , 'st_time'] = '2 to 5 hours'
+        col.loc[col['studytime'] == 3, 'st_time'] = '5 to 10 hours'
+        col.loc[col['studytime'] == 4, 'st_time'] = '> 10 hours'  
+
+    plt.figure(figsize=(18,7))
+    plt.title("Box plot for final grades,depending on the study time")
+    sns.boxplot(y="st_time", x="G3", data = raw_data , orient="h")
+    plt.show
+
+def goout_boxplot():
+    plt.figure(figsize=(18,7))
+    plt.title("Box plot for final grades,depending on the amount a student goes out")
+    sns.boxplot(y="goout", x="G3", data = raw_data , orient="h")
+    plt.show
+    
+def failures_boxplot():
+    plt.figure(figsize=(18,7))
+    plt.title("Box plot for final grades,depending on number of failures")
+    sns.boxplot(y="failures", x="G3", data = raw_data , orient="h")
+    plt.show()
+    
 def show_dalc_consumption():
     pass
 
